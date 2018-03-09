@@ -1,0 +1,16 @@
+0.pom中引入依赖
+		<!--mybaties-->
+		<dependency>
+			<groupId>org.mybatis.generator</groupId>
+			<artifactId>mybatis-generator-core</artifactId>
+			<version>1.3.5</version>
+		</dependency>
+		<!-- MySql数据库驱动 -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+1.新建D:\devData\demo\src\main\resources\generatorConfig.xml
+2.新建 D:\devData\demo\src\main\java\com\utils\MyCommentGenerator.java
+3.在generatorConfig.xml 中指定你自定义的注释生成器。
+        <commentGenerator type="com.utils.MyCommentGenerator" >
