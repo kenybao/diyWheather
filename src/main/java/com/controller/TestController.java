@@ -1,8 +1,9 @@
 package com.controller;
 
+import com.domain.User;
 import com.domain.WeatherDay;
-import com.mapper.WeatherDayMapper;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.mapper.UserMapper;
+import com.mapper.testAnnotationWeatherDayMapper;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,11 +23,24 @@ import javax.annotation.Resource;
 @EnableAutoConfiguration
 public class TestController {
     @Resource
-    WeatherDayMapper weatherDayMapper;
+    testAnnotationWeatherDayMapper weatherDayMapper;
+    @Resource
+    UserMapper userMapper;
     @GetMapping("/test1")
     @ResponseBody
     public String test(){
-        WeatherDay cityById = weatherDayMapper.getUserById("1");
+        User a = new User();
+//        a.setGmtCreate(new Date());
+        a.setMobile("123");
+        a.setLoginName("123");
+        a.setPassword("123");
+        User user = userMapper.selectByPrimaryKey(1L);
+        return user+"";
+    }
+    @GetMapping("/test2")
+    @ResponseBody
+    public String test2(){
+        WeatherDay cityById = weatherDayMapper.getWeatherDayById("1");
         System.out.println(cityById.getDay());
         Jedis jedis = new Jedis("192.168.19.130",6379);
         jedis.auth("45678");

@@ -14,3 +14,8 @@
 2.新建 D:\devData\demo\src\main\java\com\utils\MyCommentGenerator.java
 3.在generatorConfig.xml 中指定你自定义的注释生成器。
         <commentGenerator type="com.utils.MyCommentGenerator" >
+
+4.成功调用需在application.properties中添加
+       mybatis.mapper-locations=classpath*:mapper/*.xml
+       mybatis.type-aliases-package=com.domain
+       否则会报not bound mapper错误
