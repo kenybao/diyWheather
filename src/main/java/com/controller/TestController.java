@@ -2,6 +2,8 @@ package com.controller;
 
 import com.domain.UserConfig;
 import com.service.UserConfigService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,12 +21,15 @@ import javax.annotation.Resource;
 @Controller
 @RequestMapping("/Test")
 public class TestController {
+    private static Logger LOGGER = LoggerFactory.getLogger(TestController.class);
     @Autowired
     UserConfigService userConfigService;
 
     @GetMapping("/test1")
     @ResponseBody
     public String test(){
+        LOGGER.debug("test  debug");
+        LOGGER.info("test info  ");
         UserConfig userConfig = userConfigService.findAll().get(0);
         userConfig = userConfigService.getById(1);
         return userConfig.getLoginName();
