@@ -1,6 +1,5 @@
 package com;
 
-import com.domain.User;
 import com.domain.UserConfig;
 import com.service.UserConfigService;
 import org.junit.Assert;
@@ -23,7 +22,7 @@ public class SpringTest {
     UserConfigService userConfigService;
     @Test
     public void getUser(){
-        UserConfig byId = userConfigService.findById(1);
+        UserConfig byId = userConfigService.getById(1);
 //        byId = userConfigService.getById(1);
         Assert.assertNotNull(byId);
     }
