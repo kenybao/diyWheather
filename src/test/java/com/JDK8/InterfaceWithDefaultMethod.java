@@ -29,6 +29,7 @@ interface InterfaceWithDefaultMethod {
 
     /*Java 8以前的规范中接口中不允许定义静态方法。 静态方法只能在类中定义。 Java 8中可以定义静态方法。
     * http://colobu.com/2014/10/28/secrets-of-java-8-functional-interface/#JDK_8%E4%B9%8B%E5%89%8D%E5%B7%B2%E6%9C%89%E7%9A%84%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3
+    *http://blog.csdn.net/sun_promise/article/details/51121205
     * */
     static void staticIsAvailable() {
         System.out.println("staticIsAvailable");
