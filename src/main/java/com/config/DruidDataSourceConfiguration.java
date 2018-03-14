@@ -14,10 +14,10 @@ import javax.sql.DataSource;
  */
 @Configuration//TODO
 public class DruidDataSourceConfiguration {
-    @Bean
-    @ConfigurationProperties(prefix = "spring.datasource")//TODO
-    public DataSource druidDataSource() {
-        DruidDataSource druidDataSource = new DruidDataSource();
-        return druidDataSource;
-    }
+//    @Bean
+//    @ConfigurationProperties(prefix = "spring.datasource")//TODO
+//    public DataSource druidDataSource() {
+//        DruidDataSource druidDataSource = new DruidDataSource();
+//        return druidDataSource;
+//    }
 }

@@ -1,4 +1,4 @@
-package com;
+package com.tests.springbootTests;
 
 import com.domain.UserConfig;
 import com.service.UserConfigService;
@@ -17,7 +17,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 //SpringBoot框架下基于Junit的单元测试
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class SpringTest {
+public class SpringBootDemoTest {
     @Autowired
     UserConfigService userConfigService;
     @Test
