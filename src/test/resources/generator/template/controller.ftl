@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
@@ -18,7 +20,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/${baseRequestMapping}/")
 public class ${modelNameUpperCamel}Controller {
-
+    private static Logger LOGGER = LoggerFactory.getLogger(${modelNameUpperCamel}Controller.class);
     @Autowired
     ${modelNameUpperCamel}Service ${modelNameLowerCamel}Service;
 

@@ -1,5 +1,6 @@
 package com.JDK8;
 
+import com.google.common.collect.Lists;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -52,6 +53,7 @@ public class _1_LambdaTest {
         Arrays.asList("a", "aaa", "aa", "b", "d").sort((e1, e3) -> e1.compareTo(e3));
         //此处为何编译失败 想不懂 TODO ???
 //        List ssa = Arrays.asList("a", "aaa", "aa", "b", "d");  ssa.sort((e1, e2) -> e1.compareTo(e2));
+        List<Object> ass = Lists.newArrayList();
     }
     //MathOperation 是一个接口 接口中含有一个成员函数 operation
     interface MathOperation {

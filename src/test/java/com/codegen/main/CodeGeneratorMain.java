@@ -8,7 +8,7 @@ import com.codegen.service.CodeGeneratorManager;
  */
 public class CodeGeneratorMain {
 
-	private static final String TABLE = "user_config";
+	private static final String TABLE = "city_info";
 
 	private static final String MODEL_NAME = "ITest";
 

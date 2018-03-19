@@ -11,6 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication //TODO
 @ComponentScan("com.*")
 @MapperScan(basePackages  = "com.mapper")
+
 public class DemoApplication {
 
 	public static void main(String[] args) {

@@ -1,18 +1,15 @@
 package com.tests;
 
-import com.DemoApplication;
+import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.transaction.annotation.Transactional;
+import org.junit.runners.JUnit4;
 
 /**
  * @author 73598.
  * @Date 2018/3/14 0014.
- * @Time 16:35.
+ * @Time 20:07.
  */
-//SpringBoot框架下基于Junit的单元测试
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = DemoApplication.class ,webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@RunWith(JUnit4.class)
 public class BaseTest {
+
 }
