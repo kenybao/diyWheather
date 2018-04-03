@@ -8,8 +8,8 @@ import org.springframework.context.annotation.ComponentScan;
 /**
  * @author 73598
  */
-@SpringBootApplication //TODO
-@ComponentScan("com.*")
+@SpringBootApplication //TODO已经包含ComponentScan等注解 默认扫描同级下的包
+//@ComponentScan("com.*")
 @MapperScan(basePackages  = "com.mapper")
 public class DemoApplication {
 

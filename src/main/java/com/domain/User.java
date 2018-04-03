@@ -162,4 +162,22 @@ public class User {
     public void setLocationProvince(String locationProvince) {
         this.locationProvince = locationProvince == null ? null : locationProvince.trim();
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", loginName='" + loginName + '\'' +
+                ", password='" + password + '\'' +
+                ", username='" + username + '\'' +
+                ", isDeleted='" + isDeleted + '\'' +
+                ", email='" + email + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", gmtCreate=" + gmtCreate +
+                ", gmtModified=" + gmtModified +
+                ", locationArea='" + locationArea + '\'' +
+                ", locationCity='" + locationCity + '\'' +
+                ", locationProvince='" + locationProvince + '\'' +
+                '}';
+    }
 }
